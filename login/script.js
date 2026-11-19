@@ -5,7 +5,7 @@ form1.onsubmit = (e)=>{
         e.target[0].value,
         e.target[1].value,
     ]
-    let response = fetch("http://localhost:3000/users?email="+email)
+    let response = fetch("http://localhost:3001/users?email="+email)
     response.then(v=>{return v.json()}).then(v2=>{
         console.log(v2);
         let [data]=v2

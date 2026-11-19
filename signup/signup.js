@@ -95,22 +95,23 @@ form.onsubmit=(e)=>{
     console.dir(e.target);
     let[username,email,phone,password]=[
         e.target[0].value,
-        e.target[1].valuee,
+        e.target[1].value,
         e.target[2].value,
         e.target[3].value,
 
     ]
     let target={username,password,phone,email}
     console.log(target);
-    if(verified)
+    if(true)
     {
-        response= fetch("http://localhost:3000/users"),
+        response= fetch("http://localhost:3001/users",
         {
             method:"POST",
             headers:{"Content-Type":"application/json"}
             ,body:JSON.stringify(target)
 
         }
+    )
 
     }
     
